@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HorrorLevel.unity
     guid: a928338a4b933774d8d29019831d9911
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: ada939d313791ad4da5911fd64d74717, type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: cf1efad9272908247a2a46bb970a6a76, type: 3}
+  m_UseUCBPForAssetBundles: 0
