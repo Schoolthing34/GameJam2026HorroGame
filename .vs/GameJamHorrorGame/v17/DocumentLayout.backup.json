@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\johnn\\Documents\\GitHub\\GameJamHorrorGame\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1FB0D232-5D5D-F89D-9C74-F5AE44F61E9E}|Assembly-CSharp.csproj|c:\\users\\johnn\\documents\\github\\gamejamhorrorgame\\assets\\deadbody lite\\scripts\\bathtub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FB0D232-5D5D-F89D-9C74-F5AE44F61E9E}|Assembly-CSharp.csproj|solutionrelative:assets\\deadbody lite\\scripts\\bathtub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FB0D232-5D5D-F89D-9C74-F5AE44F61E9E}|Assembly-CSharp.csproj|c:\\users\\johnn\\documents\\github\\gamejamhorrorgame\\assets\\buttonmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FB0D232-5D5D-F89D-9C74-F5AE44F61E9E}|Assembly-CSharp.csproj|solutionrelative:assets\\buttonmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BathTub.cs",
+              "DocumentMoniker": "C:\\Users\\johnn\\Documents\\GitHub\\GameJamHorrorGame\\Assets\\DeadBody LITE\\Scripts\\BathTub.cs",
+              "RelativeDocumentMoniker": "Assets\\DeadBody LITE\\Scripts\\BathTub.cs",
+              "ToolTip": "C:\\Users\\johnn\\Documents\\GitHub\\GameJamHorrorGame\\Assets\\DeadBody LITE\\Scripts\\BathTub.cs",
+              "RelativeToolTip": "Assets\\DeadBody LITE\\Scripts\\BathTub.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T17:43:36.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ButtonManager.cs",
+              "DocumentMoniker": "C:\\Users\\johnn\\Documents\\GitHub\\GameJamHorrorGame\\Assets\\ButtonManager.cs",
+              "RelativeDocumentMoniker": "Assets\\ButtonManager.cs",
+              "ToolTip": "C:\\Users\\johnn\\Documents\\GitHub\\GameJamHorrorGame\\Assets\\ButtonManager.cs",
+              "RelativeToolTip": "Assets\\ButtonManager.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T16:54:57.767Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
