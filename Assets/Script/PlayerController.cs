@@ -21,9 +21,9 @@ public class PlayerController : MonoBehaviour
 
     [Header("Crouching Statistics")]
     public float CrouchSpeed;
-    public float PlayerHeight;
+   
     public float CrouchingPlayerHeight;
-
+    public float PlayerHeight;
     [Header("Other Walking Staistics")]
     public float MaxSpeed;
     public float Drag;
@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
     [Header("PlayerInputs")]
     public InputAction Crouch;
     public InputAction Run;
+    public InputAction OpenDoor;
     Rigidbody PlayerRigidbody;
 
     enum MovementPosition { Walking,Running,Crouching}
@@ -50,6 +51,8 @@ public class PlayerController : MonoBehaviour
         Crouch.Enable();
         Run.Enable();
         MovementState = MovementPosition.Walking;
+        PlayerHeight = this.transform.localScale.y;
+        OpenDoor.Enable();
     }
     private void Update()
     {
@@ -69,7 +72,7 @@ public class PlayerController : MonoBehaviour
             
             if(PlayerRigidbody.linearVelocity.magnitude>1)
             {
-                Debug.Log(PlayerRigidbody.linearVelocity.magnitude);
+                //Debug.Log(PlayerRigidbody.linearVelocity.magnitude);
                 //Stamina Reduction
                 float cost = StaminaCost * Time.deltaTime;
                 //Debug.Log("cost= "+cost+" time is "+Time.deltaTime);
@@ -119,6 +122,7 @@ public class PlayerController : MonoBehaviour
             if (Crouch.WasPerformedThisDynamicUpdate())
             {
                 MovementState = MovementPosition.Crouching;
+                PlayerCrouchTransform(true);
             }
         }
 
@@ -127,6 +131,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Crouch.WasReleasedThisFrame())
             {
+                PlayerCrouchTransform(false);
                 MovementState = MovementPosition.Walking;
             }
         }
@@ -138,8 +143,36 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        //Opening door/ interaction with world stuff
+        if (OpenDoor.WasPerformedThisDynamicUpdate())
+        {
+            Debug.Log("e PRESSED");
+            //Check for a door to open
+            RaycastHit ray;
+            Vector3 Foward = transform.TransformDirection(this.transform.position);
+            Debug.DrawRay(this.transform.position, Foward * 100f, Color.aliceBlue, 1000);
+            if (Physics.Raycast(this.transform.position, Foward, out ray, 10))
+            {
+                Debug.Log(ray.collider.name);
+               // Debug.DrawRay(this.transform.position, Foward*100f,Color.aliceBlue,1000);
+                if (ray.collider.CompareTag("Doors"))
+                {
+                    Debug.Log(ray.collider.name);
+                }
+            }
+        }
     }
-
+    private void PlayerCrouchTransform(bool Crouch)
+    {
+        if (Crouch)
+        {
+            this.transform.localScale = new Vector3(this.transform.localScale.x, CrouchingPlayerHeight, this.transform.localScale.z);
+        }
+        else
+        {
+            this.transform.localScale = new Vector3(this.transform.localScale.x, PlayerHeight, this.transform.localScale.z);
+        }
+    }
     private void MovePlayer()
     {
 
