@@ -12,6 +12,16 @@ public class RoofScript : MonoBehaviour
 
     }
 
+    [ContextMenu("RevealRoofs")]
+
+    public void RevealRoofs()
+    {
+        for (int i = 0; i < Roofs.Length; i++)
+        {
+            Roofs[i].gameObject.SetActive(true);// = false;   
+        }
+    }
+
     [ContextMenu("RemoveRoofs")]
     public void RemoveRoofs()
     {

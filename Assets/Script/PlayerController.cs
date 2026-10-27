@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -41,6 +42,12 @@ public class PlayerController : MonoBehaviour
     public InputAction OpenDoor;
     Rigidbody PlayerRigidbody;
 
+    [Header("UI")]
+    public TextMeshProUGUI PlayerbottomScreenText;
+
+
+    public bool PlayerhaSeenaDoor = false;
+
     enum MovementPosition { Walking,Running,Crouching}
       MovementPosition MovementState;
 
@@ -63,6 +70,58 @@ public class PlayerController : MonoBehaviour
       // Vector3 Veloctity = new Vector3(PlayerRigidbody.angularVelocity.x,0f,PlayerRigidbody.angularVelocity.z);
       //  Debug.Log(Veloctity.magnitude);
     }
+    [ContextMenu("SetTextMethod")]
+    public void SetTextMethod(string Input)
+    {
+        PlayerbottomScreenText.text = Input;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Doors"))
+        {
+            if (PlayerhaSeenaDoor == false)
+            {
+                PlayerhaSeenaDoor = true;
+                SetTextMethod("Press E to Open and close doors");
+            }
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Doors"))
+        {
+            if (PlayerhaSeenaDoor == false)
+            {
+                PlayerhaSeenaDoor = true;
+                SetTextMethod("Press E to Open and close doors");
+            }
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Doors"))
+        {
+            if (PlayerhaSeenaDoor)
+            {
+
+                SetTextMethod("");
+            }
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Doors"))
+        {
+            if (PlayerhaSeenaDoor)
+            {
+               
+                SetTextMethod("");
+            }
+        }
+    }
+
 
 
     private void StaminaManagement()

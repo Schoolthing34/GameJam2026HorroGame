@@ -1,34 +1,57 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.ProBuilder.Shapes;
 
 public class DoorInteractionScript : MonoBehaviour
 {
 
     public bool DoorOpen;
 
-    public float OpenAngle;
-    public float CloseAngle;
+    public Vector3 OpenAngle;
+    public Vector3 CloseAngle;
+    public Vector3 targetAngle;
     public GameObject DoorHinge;
     public GameObject KeyNeeded;
     public bool DoorLocked;
+    public bool PlayerCanNowOpenMe = false;
+    public InputAction DoorInteractionButton;
+    bool PlayerHasPressedButton = false;
+    public float DoorMovementSpeed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if(DoorOpen)
+        DoorInteractionButton.Enable();
+        //Basic garnetee doors in state we want
+        if (DoorOpen)
         {
-            CloseDoor();
+            OpenDoor();
+            
         }
         else
         {
-            OpenDoor();
+            CloseDoor();
         }
     }
 
 
     private void CloseDoor()
     {
-        DoorHinge.transform.rotation = Quaternion.Euler(DoorHinge.transform.rotation.x, OpenAngle, DoorHinge.transform.rotation.z);
+      //  DoorHinge.transform.rotation = Quaternion.Euler(DoorHinge.transform.rotation.x, OpenAngle.rotation.y, DoorHinge.transform.rotation.z);
         DoorOpen = false;
+        PlayerHasPressedButton = true;
+        
+        targetAngle = CloseAngle;
+        DoorHinge.GetComponent<Collider>().enabled = false;
     }
+
+
+   public void  PlayerHere()
+    {
+        PlayerCanNowOpenMe = true;
+    }
+
+    public void PlayerLeft()
+        { PlayerCanNowOpenMe = false; }
     public void InteractWithDoor()
     {
         if (DoorOpen)
@@ -42,12 +65,35 @@ public class DoorInteractionScript : MonoBehaviour
     }
     private void OpenDoor()
     {
-        DoorHinge.transform.rotation = Quaternion.Euler(DoorHinge.transform.rotation.x, OpenAngle, DoorHinge.transform.rotation.z);
+        PlayerHasPressedButton = true;
         DoorOpen = true;
+        targetAngle = OpenAngle;
+        DoorHinge.GetComponent<Collider>().enabled = false;
     }
     // Update is called once per frame
     void Update()
     {
-        
+        if (PlayerCanNowOpenMe)
+        {
+            if (DoorInteractionButton.WasPressedThisDynamicUpdate())
+            {
+                Debug.Log("Hey eeee");
+                InteractWithDoor();
+            }
+        }
+
+        if(PlayerHasPressedButton)
+        {
+            if (DoorHinge.transform.rotation != Quaternion.Euler( targetAngle))
+            {
+               
+                DoorHinge.transform.rotation = Quaternion.RotateTowards(DoorHinge.transform.rotation,Quaternion.Euler(targetAngle), DoorMovementSpeed * Time.deltaTime);
+            }
+            else
+            {
+                DoorHinge.GetComponent<Collider>().enabled = true;
+                PlayerHasPressedButton = false;
+            }
+        }
     }
 }
