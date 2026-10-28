@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,9 +22,9 @@ public class PlayerController : MonoBehaviour
 
     [Header("Crouching Statistics")]
     public float CrouchSpeed;
-    public float PlayerHeight;
+   
     public float CrouchingPlayerHeight;
-
+    public float PlayerHeight;
     [Header("Other Walking Staistics")]
     public float MaxSpeed;
     public float Drag;
@@ -38,11 +39,22 @@ public class PlayerController : MonoBehaviour
     [Header("PlayerInputs")]
     public InputAction Crouch;
     public InputAction Run;
+    public InputAction OpenDoor;
     Rigidbody PlayerRigidbody;
+
+    [Header("UI")]
+    public TextMeshProUGUI PlayerbottomScreenText;
+
+
+    public bool PlayerhaSeenaDoor = false;
 
     enum MovementPosition { Walking,Running,Crouching}
       MovementPosition MovementState;
 
+
+    [Header("Slope")]
+    public float maxSlopeAngle;
+    private RaycastHit SlopeHit;
     private void Start()
     {
         PlayerRigidbody = GetComponent<Rigidbody>();
@@ -50,6 +62,8 @@ public class PlayerController : MonoBehaviour
         Crouch.Enable();
         Run.Enable();
         MovementState = MovementPosition.Walking;
+        PlayerHeight = this.transform.localScale.y;
+        OpenDoor.Enable();
     }
     private void Update()
     {
@@ -60,6 +74,58 @@ public class PlayerController : MonoBehaviour
       // Vector3 Veloctity = new Vector3(PlayerRigidbody.angularVelocity.x,0f,PlayerRigidbody.angularVelocity.z);
       //  Debug.Log(Veloctity.magnitude);
     }
+    [ContextMenu("SetTextMethod")]
+    public void SetTextMethod(string Input)
+    {
+        PlayerbottomScreenText.text = Input;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Doors"))
+        {
+            if (PlayerhaSeenaDoor == false)
+            {
+                PlayerhaSeenaDoor = true;
+                SetTextMethod("Press E to Open and close doors");
+            }
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Doors"))
+        {
+            if (PlayerhaSeenaDoor == false)
+            {
+                PlayerhaSeenaDoor = true;
+                SetTextMethod("Press E to Open and close doors");
+            }
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Doors"))
+        {
+            if (PlayerhaSeenaDoor)
+            {
+
+                SetTextMethod("");
+            }
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Doors"))
+        {
+            if (PlayerhaSeenaDoor)
+            {
+               
+                SetTextMethod("");
+            }
+        }
+    }
+
 
 
     private void StaminaManagement()
@@ -69,7 +135,7 @@ public class PlayerController : MonoBehaviour
             
             if(PlayerRigidbody.linearVelocity.magnitude>1)
             {
-                Debug.Log(PlayerRigidbody.linearVelocity.magnitude);
+                //Debug.Log(PlayerRigidbody.linearVelocity.magnitude);
                 //Stamina Reduction
                 float cost = StaminaCost * Time.deltaTime;
                 //Debug.Log("cost= "+cost+" time is "+Time.deltaTime);
@@ -119,6 +185,7 @@ public class PlayerController : MonoBehaviour
             if (Crouch.WasPerformedThisDynamicUpdate())
             {
                 MovementState = MovementPosition.Crouching;
+                PlayerCrouchTransform(true);
             }
         }
 
@@ -127,6 +194,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Crouch.WasReleasedThisFrame())
             {
+                PlayerCrouchTransform(false);
                 MovementState = MovementPosition.Walking;
             }
         }
@@ -138,8 +206,36 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        //Opening door/ interaction with world stuff
+        if (OpenDoor.WasPerformedThisDynamicUpdate())
+        {
+            Debug.Log("e PRESSED");
+            //Check for a door to open
+            RaycastHit ray;
+            Vector3 Foward = transform.TransformDirection(this.transform.position);
+            Debug.DrawRay(this.transform.position, Foward * 100f, Color.aliceBlue, 1000);
+            if (Physics.Raycast(this.transform.position, Foward, out ray, 10))
+            {
+                Debug.Log(ray.collider.name);
+               // Debug.DrawRay(this.transform.position, Foward*100f,Color.aliceBlue,1000);
+                if (ray.collider.CompareTag("Doors"))
+                {
+                    Debug.Log(ray.collider.name);
+                }
+            }
+        }
     }
-
+    private void PlayerCrouchTransform(bool Crouch)
+    {
+        if (Crouch)
+        {
+            this.transform.localScale = new Vector3(this.transform.localScale.x, CrouchingPlayerHeight, this.transform.localScale.z);
+        }
+        else
+        {
+            this.transform.localScale = new Vector3(this.transform.localScale.x, PlayerHeight, this.transform.localScale.z);
+        }
+    }
     private void MovePlayer()
     {
 
@@ -154,29 +250,74 @@ public class PlayerController : MonoBehaviour
         {
             case MovementPosition.Walking:
                 //Debug.Log("Walking");
-                PlayerRigidbody.AddForce(MoveDirection.normalized * WalkSpeed * Time.deltaTime, ForceMode.Force);
-
+                if (OnSlope())
+                {
+                    PlayerRigidbody.AddForce(GetSlopeMoveDirection() * WalkSpeed * Time.deltaTime, ForceMode.Force);
+                }
+                else
+                {
+                    PlayerRigidbody.AddForce(MoveDirection.normalized * WalkSpeed * Time.deltaTime, ForceMode.Force);
+                }
                 break;
             case MovementPosition.Running:
                 if (Stamina > 0)
                 {
-                    PlayerRigidbody.AddForce(MoveDirection.normalized * RunSpeed * Time.deltaTime, ForceMode.Force);
+                    if (OnSlope())
+                    {
+                        PlayerRigidbody.AddForce(GetSlopeMoveDirection() * RunSpeed * Time.deltaTime, ForceMode.Force);
+                }
+                    else
+                    {
+                        PlayerRigidbody.AddForce(MoveDirection.normalized * RunSpeed * Time.deltaTime, ForceMode.Force);
+                    }
                     
                    // Stamina=Stamina-StaminaCost;
                 }
                 else
                 {
-                    PlayerRigidbody.AddForce(MoveDirection.normalized * WalkSpeed * Time.deltaTime, ForceMode.Force);
-
+                    if (OnSlope())
+                    {
+                        PlayerRigidbody.AddForce(GetSlopeMoveDirection() * WalkSpeed * Time.deltaTime, ForceMode.Force);
+}
+                    else
+                    {
+                        PlayerRigidbody.AddForce(MoveDirection.normalized * WalkSpeed * Time.deltaTime, ForceMode.Force);
+                    }
+                  
                 }
                // Debug.Log("Runnning");
                 break;
             case MovementPosition.Crouching:
-                PlayerRigidbody.AddForce(MoveDirection.normalized * CrouchSpeed * Time.deltaTime, ForceMode.Force);
-
+                if (OnSlope())
+                {
+                    PlayerRigidbody.AddForce(GetSlopeMoveDirection() * CrouchSpeed * Time.deltaTime, ForceMode.Force);
+}
+                else
+                {
+                    PlayerRigidbody.AddForce(MoveDirection.normalized * CrouchSpeed * Time.deltaTime, ForceMode.Force);
+                }
+               
                 //Debug.Log("Crouching");
                 break;
         }
          }
    
+
+    private bool OnSlope()
+    {
+        if(Physics.Raycast(transform.position,Vector3.down,out SlopeHit,PlayerHeight*0.5f+1f))
+        {
+            float angle = Vector3.Angle(Vector3.up, SlopeHit.normal);
+            //Debug.Log(angle);
+            return angle < maxSlopeAngle && angle != 0;
+        }
+
+        return false;
+    }
+
+
+    private  Vector3 GetSlopeMoveDirection()
+    {
+        return Vector3.ProjectOnPlane(MoveDirection, SlopeHit.normal).normalized;
+    }
 }
