@@ -33,7 +33,18 @@ public class DoorInteractionScript : MonoBehaviour
         }
     }
 
+    [ContextMenu("TestCloseDoor")]
+    private void TestCloseDoor()
+    {
+        //  DoorHinge.transform.rotation = Quaternion.Euler(DoorHinge.transform.rotation.x, OpenAngle.rotation.y, DoorHinge.transform.rotation.z);
+        DoorOpen = false;
+        PlayerHasPressedButton = true;
 
+        targetAngle = CloseAngle;
+        DoorHinge.GetComponent<Collider>().enabled = false;
+        DoorHinge.transform.rotation = Quaternion.Euler(targetAngle);
+    }
+    [ContextMenu("CloseDoor")]
     private void CloseDoor()
     {
       //  DoorHinge.transform.rotation = Quaternion.Euler(DoorHinge.transform.rotation.x, OpenAngle.rotation.y, DoorHinge.transform.rotation.z);
@@ -63,6 +74,16 @@ public class DoorInteractionScript : MonoBehaviour
             OpenDoor();
         }
     }
+    [ContextMenu("TestOpenDoor")]
+    private void TestOpenDoor()
+    {
+        PlayerHasPressedButton = true;
+        DoorOpen = true;
+        targetAngle = OpenAngle;
+        DoorHinge.GetComponent<Collider>().enabled = false;
+        DoorHinge.transform.rotation = Quaternion.Euler(targetAngle);
+    }
+    [ContextMenu("OpenDoor")]
     private void OpenDoor()
     {
         PlayerHasPressedButton = true;

@@ -51,6 +51,10 @@ public class PlayerController : MonoBehaviour
     enum MovementPosition { Walking,Running,Crouching}
       MovementPosition MovementState;
 
+
+    [Header("Slope")]
+    public float maxSlopeAngle;
+    private RaycastHit SlopeHit;
     private void Start()
     {
         PlayerRigidbody = GetComponent<Rigidbody>();
@@ -246,29 +250,74 @@ public class PlayerController : MonoBehaviour
         {
             case MovementPosition.Walking:
                 //Debug.Log("Walking");
-                PlayerRigidbody.AddForce(MoveDirection.normalized * WalkSpeed * Time.deltaTime, ForceMode.Force);
-
+                if (OnSlope())
+                {
+                    PlayerRigidbody.AddForce(GetSlopeMoveDirection() * WalkSpeed * Time.deltaTime, ForceMode.Force);
+                }
+                else
+                {
+                    PlayerRigidbody.AddForce(MoveDirection.normalized * WalkSpeed * Time.deltaTime, ForceMode.Force);
+                }
                 break;
             case MovementPosition.Running:
                 if (Stamina > 0)
                 {
-                    PlayerRigidbody.AddForce(MoveDirection.normalized * RunSpeed * Time.deltaTime, ForceMode.Force);
+                    if (OnSlope())
+                    {
+                        PlayerRigidbody.AddForce(GetSlopeMoveDirection() * RunSpeed * Time.deltaTime, ForceMode.Force);
+                }
+                    else
+                    {
+                        PlayerRigidbody.AddForce(MoveDirection.normalized * RunSpeed * Time.deltaTime, ForceMode.Force);
+                    }
                     
                    // Stamina=Stamina-StaminaCost;
                 }
                 else
                 {
-                    PlayerRigidbody.AddForce(MoveDirection.normalized * WalkSpeed * Time.deltaTime, ForceMode.Force);
-
+                    if (OnSlope())
+                    {
+                        PlayerRigidbody.AddForce(GetSlopeMoveDirection() * WalkSpeed * Time.deltaTime, ForceMode.Force);
+}
+                    else
+                    {
+                        PlayerRigidbody.AddForce(MoveDirection.normalized * WalkSpeed * Time.deltaTime, ForceMode.Force);
+                    }
+                  
                 }
                // Debug.Log("Runnning");
                 break;
             case MovementPosition.Crouching:
-                PlayerRigidbody.AddForce(MoveDirection.normalized * CrouchSpeed * Time.deltaTime, ForceMode.Force);
-
+                if (OnSlope())
+                {
+                    PlayerRigidbody.AddForce(GetSlopeMoveDirection() * CrouchSpeed * Time.deltaTime, ForceMode.Force);
+}
+                else
+                {
+                    PlayerRigidbody.AddForce(MoveDirection.normalized * CrouchSpeed * Time.deltaTime, ForceMode.Force);
+                }
+               
                 //Debug.Log("Crouching");
                 break;
         }
          }
    
+
+    private bool OnSlope()
+    {
+        if(Physics.Raycast(transform.position,Vector3.down,out SlopeHit,PlayerHeight*0.5f+1f))
+        {
+            float angle = Vector3.Angle(Vector3.up, SlopeHit.normal);
+            //Debug.Log(angle);
+            return angle < maxSlopeAngle && angle != 0;
+        }
+
+        return false;
+    }
+
+
+    private  Vector3 GetSlopeMoveDirection()
+    {
+        return Vector3.ProjectOnPlane(MoveDirection, SlopeHit.normal).normalized;
+    }
 }

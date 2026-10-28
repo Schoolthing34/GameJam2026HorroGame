@@ -4546,11 +4546,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorInteractionScript
   DoorOpen: 0
-  OpenAngle: 90
-  CloseAngle: 0
+  OpenAngle: {x: 0, y: 0, z: 0}
+  CloseAngle: {x: 0, y: 0, z: 0}
+  targetAngle: {x: 0, y: 0, z: 0}
   DoorHinge: {fileID: 504689240}
   KeyNeeded: {fileID: 0}
   DoorLocked: 0
+  PlayerCanNowOpenMe: 0
+  DoorInteractionButton:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 3bf850a2-bec7-4752-a829-804b29b85f21
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  DoorMovementSpeed: 0
 --- !u!1 &534549752
 GameObject:
   m_ObjectHideFlags: 0
@@ -8093,11 +8105,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorInteractionScript
   DoorOpen: 0
-  OpenAngle: 90
-  CloseAngle: 0
+  OpenAngle: {x: 0, y: 0, z: 0}
+  CloseAngle: {x: 0, y: 0, z: 0}
+  targetAngle: {x: 0, y: 0, z: 0}
   DoorHinge: {fileID: 1352927613}
   KeyNeeded: {fileID: 0}
   DoorLocked: 0
+  PlayerCanNowOpenMe: 0
+  DoorInteractionButton:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 0ce893c7-8159-4a52-85ad-c8debd4f21d7
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  DoorMovementSpeed: 0
 --- !u!43 &974413168
 Mesh:
   m_ObjectHideFlags: 0
@@ -12326,11 +12350,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorInteractionScript
   DoorOpen: 0
-  OpenAngle: 90
-  CloseAngle: 0
+  OpenAngle: {x: 0, y: 0, z: 0}
+  CloseAngle: {x: 0, y: 0, z: 0}
+  targetAngle: {x: 0, y: 0, z: 0}
   DoorHinge: {fileID: 2068512383}
   KeyNeeded: {fileID: 0}
   DoorLocked: 0
+  PlayerCanNowOpenMe: 0
+  DoorInteractionButton:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: fff32fc8-8722-4dd8-b0dd-c6aef7ed9f0e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  DoorMovementSpeed: 0
 --- !u!1 &1646435894
 GameObject:
   m_ObjectHideFlags: 0
@@ -14283,11 +14319,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorInteractionScript
   DoorOpen: 0
-  OpenAngle: 90
-  CloseAngle: 0
+  OpenAngle: {x: 0, y: 0, z: 0}
+  CloseAngle: {x: 0, y: 0, z: 0}
+  targetAngle: {x: 0, y: 0, z: 0}
   DoorHinge: {fileID: 1779290588}
   KeyNeeded: {fileID: 0}
   DoorLocked: 0
+  PlayerCanNowOpenMe: 0
+  DoorInteractionButton:
+    m_Name: Door Interaction Button
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 88f2c516-150b-4277-b78d-07edd5e6c832
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  DoorMovementSpeed: 0
 --- !u!1 &1790920499
 GameObject:
   m_ObjectHideFlags: 0
