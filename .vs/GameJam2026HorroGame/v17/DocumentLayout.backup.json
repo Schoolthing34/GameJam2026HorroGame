@@ -3,28 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|c:\\users\\johnn\\documents\\github\\gamejam2026horrogame\\assets\\shader\\new custom render texture.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|solutionrelative:assets\\shader\\new custom render texture.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|c:\\users\\johnn\\documents\\github\\gamejam2026horrogame\\assets\\script\\renderpipelineasset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\renderpipelineasset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|c:\\users\\johnn\\documents\\github\\gamejam2026horrogame\\assets\\script\\collsiioninvisccript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\collsiioninvisccript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|c:\\users\\johnn\\documents\\github\\gamejam2026horrogame\\assets\\import folder\\monstermutant 7\\stand\\standard_two_sided .shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|solutionrelative:assets\\import folder\\monstermutant 7\\stand\\standard_two_sided .shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\assets\\script\\audiosphere.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\audiosphere.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\assets\\script\\doorinteractionscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\doorinteractionscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\assets\\script\\doorcollliderscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\doorcollliderscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\assets\\script\\enemymainmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemymainmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\assets\\script\\cammover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\cammover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\assets\\script\\camrotation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\camrotation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\assets\\script\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\assets\\script\\audiomanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\audiomanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\assets\\script\\roofscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,8 +47,28 @@
       "RelativeMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\roomcreationscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\assets\\script\\camrotation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\camrotation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\assets\\script\\doorcollliderscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\doorcollliderscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Library\\PackageCache\\com.unity.ai.navigation@d0cf77b009bb\\Runtime\\NavMeshLink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.ai.navigation@d0cf77b009bb\\Runtime\\NavMeshLink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\assets\\shader\\invisibleshadowcaster.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|solutionrelative:assets\\shader\\invisibleshadowcaster.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Shader\\New Custom Render Texture.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Shader\\New Custom Render Texture.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\assets\\script\\collsiioninvisccript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\collsiioninvisccript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\assets\\script\\doorinteractionscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5826E4CE-FF22-FCBE-A60A-70824ECB809A}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\doorinteractionscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,6 +83,104 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "RenderPipeLineAsset.cs",
+              "DocumentMoniker": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Script\\RenderPipeLineAsset.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\RenderPipeLineAsset.cs",
+              "ToolTip": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Script\\RenderPipeLineAsset.cs",
+              "RelativeToolTip": "Assets\\Script\\RenderPipeLineAsset.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T04:57:30.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Standard_Two_Sided .shader",
+              "DocumentMoniker": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Import folder\\MonsterMutant 7\\Stand\\Standard_Two_Sided .shader",
+              "RelativeDocumentMoniker": "Assets\\Import folder\\MonsterMutant 7\\Stand\\Standard_Two_Sided .shader",
+              "ToolTip": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Import folder\\MonsterMutant 7\\Stand\\Standard_Two_Sided .shader",
+              "RelativeToolTip": "Assets\\Import folder\\MonsterMutant 7\\Stand\\Standard_Two_Sided .shader",
+              "ViewState": "AgIAAE4AAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2026-10-29T04:03:32.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AudioSphere.cs",
+              "DocumentMoniker": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Script\\AudioSphere.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\AudioSphere.cs",
+              "ToolTip": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Script\\AudioSphere.cs",
+              "RelativeToolTip": "Assets\\Script\\AudioSphere.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAwwBMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T00:07:52.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AudioManger.cs",
+              "DocumentMoniker": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Script\\AudioManger.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\AudioManger.cs",
+              "ToolTip": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Script\\AudioManger.cs",
+              "RelativeToolTip": "Assets\\Script\\AudioManger.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwCcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-28T21:46:06.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EnemyManager.cs",
+              "DocumentMoniker": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Script\\EnemyManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\EnemyManager.cs",
+              "ToolTip": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Script\\EnemyManager.cs",
+              "RelativeToolTip": "Assets\\Script\\EnemyManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-28T19:46:52.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EnemyMainMovement.cs",
+              "DocumentMoniker": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Script\\EnemyMainMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\EnemyMainMovement.cs",
+              "ToolTip": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Script\\EnemyMainMovement.cs",
+              "RelativeToolTip": "Assets\\Script\\EnemyMainMovement.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAAwGIAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-28T16:43:28.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "NavMeshLink.cs",
+              "DocumentMoniker": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Library\\PackageCache\\com.unity.ai.navigation@d0cf77b009bb\\Runtime\\NavMeshLink.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ai.navigation@d0cf77b009bb\\Runtime\\NavMeshLink.cs",
+              "ToolTip": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Library\\PackageCache\\com.unity.ai.navigation@d0cf77b009bb\\Runtime\\NavMeshLink.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.ai.navigation@d0cf77b009bb\\Runtime\\NavMeshLink.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-28T16:29:37.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "InvisibleShadowCaster.shader",
+              "DocumentMoniker": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Shader\\InvisibleShadowCaster.shader",
+              "RelativeDocumentMoniker": "Assets\\Shader\\InvisibleShadowCaster.shader",
+              "ToolTip": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Shader\\InvisibleShadowCaster.shader",
+              "RelativeToolTip": "Assets\\Shader\\InvisibleShadowCaster.shader",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2026-10-28T00:31:58.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "New Custom Render Texture.shader",
               "DocumentMoniker": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Shader\\New Custom Render Texture.shader",
               "RelativeDocumentMoniker": "Assets\\Shader\\New Custom Render Texture.shader",
@@ -58,12 +188,11 @@
               "RelativeToolTip": "Assets\\Shader\\New Custom Render Texture.shader",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
-              "WhenOpened": "2026-10-28T00:30:37.192Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-28T00:30:37.192Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 15,
               "Title": "CollsiionInviSccript.cs",
               "DocumentMoniker": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Script\\CollsiionInviSccript.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CollsiionInviSccript.cs",
@@ -71,12 +200,11 @@
               "RelativeToolTip": "Assets\\Script\\CollsiionInviSccript.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T23:25:17.205Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T23:25:17.205Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "DoorCollliderSCRIPT.cs",
               "DocumentMoniker": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Script\\DoorCollliderSCRIPT.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\DoorCollliderSCRIPT.cs",
@@ -88,31 +216,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "RoomCreationScript.cs",
               "DocumentMoniker": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Script\\RoomCreationScript.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\RoomCreationScript.cs",
               "ToolTip": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Script\\RoomCreationScript.cs",
               "RelativeToolTip": "Assets\\Script\\RoomCreationScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-26T14:37:15.161Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "RoofScript.cs",
               "DocumentMoniker": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Script\\RoofScript.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\RoofScript.cs",
               "ToolTip": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Script\\RoofScript.cs",
               "RelativeToolTip": "Assets\\Script\\RoofScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-26T00:03:03.955Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 16,
               "Title": "DoorInteractionScript.cs",
               "DocumentMoniker": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Script\\DoorInteractionScript.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\DoorInteractionScript.cs",
@@ -124,13 +252,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "CamRotation.cs",
               "DocumentMoniker": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Script\\CamRotation.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CamRotation.cs",
               "ToolTip": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Script\\CamRotation.cs",
               "RelativeToolTip": "Assets\\Script\\CamRotation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABLAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwBgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-25T11:40:20.67Z"
             },
@@ -148,13 +276,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Script\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PlayerController.cs",
               "ToolTip": "C:\\Users\\johnn\\Documents\\GitHub\\GameJam2026HorroGame\\Assets\\Script\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Script\\PlayerController.cs",
-              "ViewState": "AgIAABsBAAAAAAAAAADwvzYBAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAwHEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-22T22:35:01.155Z"
             }

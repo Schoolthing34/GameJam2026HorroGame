@@ -7,10 +7,23 @@ public class CamRotation : MonoBehaviour
      float yRotation;
      float xRotation;
     public GameObject Orientation;
+    private bool CamOn=true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
+    }
+
+    public void TurnCamOffOrOn()
+    {
+        if(CamOn)
+        {
+            CamOn = false;
+        }
+        else
+        {
+            CamOn = true;
+        }
     }
 
     // Update is called once per frame

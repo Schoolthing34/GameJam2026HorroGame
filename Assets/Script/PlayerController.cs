@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
 
-
-
+    [Header("MovementControls")]
+    public bool PlayerAllowedToMove = true;
+    public CamRotation cam;
     [Header("Movement")]
-  
+
     public float WalkSpeed;
     [Header("Running Statistics")]
     public float RunSpeed;
@@ -22,18 +24,18 @@ public class PlayerController : MonoBehaviour
 
     [Header("Crouching Statistics")]
     public float CrouchSpeed;
-   
+
     public float CrouchingPlayerHeight;
     public float PlayerHeight;
     [Header("Other Walking Staistics")]
     public float MaxSpeed;
     public float Drag;
 
- 
+
     public Transform orientation;
     float HorizontalInput;
     float VerticalInput;
- 
+
     Vector3 MoveDirection;
 
     [Header("PlayerInputs")]
@@ -48,13 +50,16 @@ public class PlayerController : MonoBehaviour
 
     public bool PlayerhaSeenaDoor = false;
 
-    enum MovementPosition { Walking,Running,Crouching}
-      MovementPosition MovementState;
+    enum MovementPosition { Walking, Running, Crouching }
+    MovementPosition MovementState;
 
 
     [Header("Slope")]
     public float maxSlopeAngle;
     private RaycastHit SlopeHit;
+
+    [Header("Audio")]
+    public AudioManager PlayerSound;
     private void Start()
     {
         PlayerRigidbody = GetComponent<Rigidbody>();
@@ -67,12 +72,15 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
-        PlayerInput();
-        //This needs to be called in an update in order to work on fram inputs
-        StaminaManagement();
-        PlayerRigidbody.linearDamping = Drag;
-      // Vector3 Veloctity = new Vector3(PlayerRigidbody.angularVelocity.x,0f,PlayerRigidbody.angularVelocity.z);
-      //  Debug.Log(Veloctity.magnitude);
+        if (PlayerAllowedToMove)
+        {
+            PlayerInput();
+            //This needs to be called in an update in order to work on fram inputs
+            StaminaManagement();
+            PlayerRigidbody.linearDamping = Drag;
+            // Vector3 Veloctity = new Vector3(PlayerRigidbody.angularVelocity.x,0f,PlayerRigidbody.angularVelocity.z);
+            //  Debug.Log(Veloctity.magnitude);
+        }
     }
     [ContextMenu("SetTextMethod")]
     public void SetTextMethod(string Input)
@@ -82,6 +90,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        // Debug.Log(collision.gameObject.name);
         if (collision.gameObject.CompareTag("Doors"))
         {
             if (PlayerhaSeenaDoor == false)
@@ -90,7 +99,24 @@ public class PlayerController : MonoBehaviour
                 SetTextMethod("Press E to Open and close doors");
             }
         }
+        //not else in case doors stop death
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            //Debug.Log("Time to die");
+            PlayerAllowedToMove = false;
+            cam.TurnCamOffOrOn();
+            PlayerSound.PlaySound(1);
+
+            Invoke("MainMenu", 2);
+           
+
+        }
     }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("HomeScreen");
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Doors"))
@@ -162,7 +188,12 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        MovePlayer();
+        if (PlayerAllowedToMove)
+        {
+            
+            MovePlayer();
+            
+        }
     }
 
     private void PlayerInput()
@@ -300,7 +331,19 @@ public class PlayerController : MonoBehaviour
                 //Debug.Log("Crouching");
                 break;
         }
-         }
+        if (PlayerRigidbody.linearVelocity.magnitude>0)
+        {
+          //  Debug.Log("Moving"); ;
+            PlayerSound.Sounds[0].Interval-=Time.deltaTime;
+            if (PlayerSound.Sounds[0].Interval <= 0)
+            {
+                //Debug.Log("Playing sound");
+                PlayerSound.PlaySound(0);
+                PlayerSound.Sounds[0].Interval = PlayerSound.Sounds[0].IntervalContainer;
+            }
+        }
+
+    }
    
 
     private bool OnSlope()
